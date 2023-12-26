@@ -42,7 +42,6 @@ const Code = (async (componentProps) => {
   const isDouble =
     (theme && (theme as any).dark && (theme as any).light) || false
   if (!isDouble) {
-    /* @ts-expect-error Server Component */
     return <AnnotatedCode {...props} theme={theme} />
   }
 
@@ -52,14 +51,12 @@ const Code = (async (componentProps) => {
   const lightTheme = doubleTheme.light
   return (
     <>
-      {/* @ts-expect-error Server Component */}
       <AnnotatedCode
         {...props}
         theme={darkTheme}
         mode="dark"
         lightThemeSelector={doubleTheme.lightSelector}
       />
-      {/* @ts-expect-error Server Component */}
       <AnnotatedCode
         {...props}
         theme={lightTheme}
@@ -74,7 +71,6 @@ async function AnnotatedCode(props: CodeProps) {
   let newProps = await extractAnnotationsFromCode(props)
   newProps = runExtensionsBeforeHighlight(newProps)
 
-  /* @ts-expect-error Server Component */
   return <BrightCode {...newProps} />
 }
 
