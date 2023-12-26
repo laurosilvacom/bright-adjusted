@@ -23,7 +23,7 @@ export function TitleBar(props: BrightProps) {
           left: 0,
           width: "100%",
           pointerEvents: "none",
-          background: colors.tab.border,
+          background: "#18181b",
           height: 1,
           zIndex: 9,
         }}
