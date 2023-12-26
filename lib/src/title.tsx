@@ -7,7 +7,7 @@ export function TitleBar(props: BrightProps) {
   const elementProps = {
     className: props.titleClassName,
     style: {
-      background: "red",
+      background: "#18181b",
       color: colors.tab.activeForeground,
       position: "relative" as const,
       display: "flex",
