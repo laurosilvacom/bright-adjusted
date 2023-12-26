@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "bright-adjusted",
+  "version": "1.0.0",
   "workspaces": {
     "packages": [
       "lib",
